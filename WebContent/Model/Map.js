@@ -11,7 +11,7 @@ function getDataAgendorForMapping()
 	//First request to get total of contacts
 	var contactRequestTotal = createXMLHttp();
     var totalContacts;
-    var apikey = "1a1e9f16-7848-47f6-a7e4-a1aa94f18974";
+    var apikey = "APIKEY";
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     contactRequestTotal.open('GET', proxyurl+"https://api.agendor.com.br/v3/organizations", true);
     contactRequestTotal.setRequestHeader("Authorization", "Token "+ apikey);
@@ -115,7 +115,7 @@ function getLatLng(contacts,i)
 {
 	//request to get latitude and longitude of the current contact address
 	var addrRequest = createXMLHttp();
-	apiKey = "AIzaSyDkB8v3T1hEd0IqEN3alsJLrgn3PuOXxEw";
+	apiKey = "APIKEY";
     const proxyurl = "https://cors-anywhere.herokuapp.com/"; 
     var addr = "";
     

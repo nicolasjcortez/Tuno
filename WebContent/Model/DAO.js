@@ -34,7 +34,7 @@ function getDataAgendor()
 	//First request to get total of contacts
 	var contactRequestTotal = createXMLHttp();
     var totalContacts;
-    var apikey = "1a1e9f16-7848-47f6-a7e4-a1aa94f18974";
+    var apikey = "APIKEY";
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     contactRequestTotal.open('GET', proxyurl+"https://api.agendor.com.br/v3/organizations", true);
     contactRequestTotal.setRequestHeader("Authorization", "Token "+ apikey);
@@ -190,7 +190,7 @@ function getDataBling(page, blingContacts)
 	//Request to get contacts data from Bling for current page
     var contactRequest = createXMLHttp();
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
-    apikey = "2f6e63b56e954b3f536ec3d7c41706fa67b20846168c2b71f753760db4f50ff2a4b1697a";
+    apikey = "APIKEY";
     contactRequest.open('GET', proxyurl+"https://bling.com.br/Api/v2/contatos/page="+page+"/json/&apikey="+apikey, true);
     contactRequest.onreadystatechange = function() 
     {
@@ -670,7 +670,7 @@ function postContactsIntoAgendor(currentContactIndex)
 	
 	//POST request to insert contact into Agendor
 	var postRequest = createXMLHttp();
-	var apikey = "1a1e9f16-7848-47f6-a7e4-a1aa94f18974";
+	var apikey = "APIKEY";
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     postRequest.open('POST', proxyurl+"https://api.agendor.com.br/v3/organizations", true);
     postRequest.setRequestHeader("Authorization", "Token "+ apikey);
@@ -832,7 +832,7 @@ function postContactsIntoBling(currentContactIndex)
 	//POST request to insert contact into Bling
 	var postRequest = createXMLHttp();
     const proxyurl = "https://cors-anywhere.herokuapp.com/";    
-    var apikey = "2f6e63b56e954b3f536ec3d7c41706fa67b20846168c2b71f753760db4f50ff2a4b1697a";
+    var apikey = "APIKEY";
     postRequest.open('POST', proxyurl+"https://bling.com.br/Api/v2/contato/&apikey="+apikey+"&xml="+xml, true);
     postRequest.setRequestHeader("Authorization", "Token "+ apikey);
 
@@ -1074,7 +1074,7 @@ function putIntegratedConflictContactIntoAgendor(i, integratedContact, id)
 	//create PUT request to update contact
 	var putRequest = createXMLHttp();
 	var FD  = new FormData();
-	var apikey = "1a1e9f16-7848-47f6-a7e4-a1aa94f18974";
+	var apikey = "APIKEY";
     const proxyurl = "https://cors-anywhere.herokuapp.com/";
     putRequest.open('PUT', proxyurl+"https://api.agendor.com.br/v3/organizations/"+id, true);
     putRequest.setRequestHeader("Authorization", "Token "+ apikey);
@@ -1228,7 +1228,7 @@ function putIntegratedConflictContactIntoBling(i, integratedContact, id)
 	//create PUT request to update contact
 	var putRequest = createXMLHttp();
     const proxyurl = "https://cors-anywhere.herokuapp.com/";    
-    var apikey = "2f6e63b56e954b3f536ec3d7c41706fa67b20846168c2b71f753760db4f50ff2a4b1697a";
+    var apikey = "APIKEY";
     putRequest.open('PUT', proxyurl+"https://bling.com.br/Api/v2/contato/"+id+"&apikey="+apikey+"&xml="+xml, true);
     putRequest.setRequestHeader("Authorization", "Token "+ apikey);
 
